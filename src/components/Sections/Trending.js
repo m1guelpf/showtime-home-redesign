@@ -1,15 +1,14 @@
-import trendingData from '@/data/featured.json'
 import NFT from '../NFT'
 import { ShowMoreButton } from './Spotlight'
 
-const Trending = () => (
+const Trending = ({ trendingData }) => (
 	<div className="pt-6 px-4 sm:px-10">
 		<Hero />
 		<div className="infinite-scroll-component__outerdiv pb-12">
 			<div className="infinite-scroll-component">
 				<div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 xl:grid-cols-4">
 					{trendingData.map(nft => (
-						<NFT {...nft} />
+						<NFT key={nft.token_id} {...nft} />
 					))}
 				</div>
 			</div>

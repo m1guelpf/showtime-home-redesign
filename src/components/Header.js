@@ -10,10 +10,14 @@ const Header = () => (
 					</div>
 				</a>
 			</div>
-			<div class="hidden sm:block flex-grow flex-1">
-				<div class="relative w-full">
+			<div className="hidden sm:block flex-grow flex-1">
+				<div className="relative w-full">
 					<SearchIcon className="w-5 h-5 absolute top-2.5 left-3 text-gray-500 dark:text-gray-700" />
-					<input type="search" placeholder="Search by name or wallet address" class="rounded-full border-gray-400 dark:border-gray-800 dark:text-gray-400 w-full pl-10 focus:outline-none focus:border-gray-800 dark:focus:border-gray-600 focus:ring-gray-800 dark:focus:ring-gray-600 transition bg-transparent" />
+					<input
+						type="search"
+						placeholder="Search by name or wallet address"
+						className="rounded-full border-gray-400 dark:border-gray-800 dark:text-gray-400 w-full pl-10 focus:outline-none focus:border-gray-800 dark:focus:border-gray-600 focus:ring-gray-800 dark:focus:ring-gray-600 transition bg-transparent"
+					/>
 				</div>
 			</div>
 			<div className="flex items-center">
@@ -43,9 +47,18 @@ const Header = () => (
 					</div>
 				</div>
 				<div>
-					<a className="showtime-login-button-outline dark:border-gray-800 text-sm px-2 py-1 md:px-3 md:py-2 md:text-base flex flex-row items-center rounded-full group transition" href="https://twitter.com/m1guelpf">
+					<a
+						className="showtime-login-button-outline dark:border-gray-800 text-sm px-2 py-1 md:px-3 md:py-2 md:text-base flex flex-row items-center rounded-full group transition"
+						href="https://twitter.com/m1guelpf"
+					>
 						<div>
-							<img alt="profile pic" src="https://miguelpiedrafita.com/images/_site/logo.png" className="rounded-full mr-2" style={{ height: 24, width: 24, minWidth: 24 }} />
+							<img
+								alt="profile pic"
+								src="https://miguelpiedrafita.com/images/_site/logo.png"
+								className="rounded-full mr-2"
+								style={{ height: 24, width: 24, minWidth: 24 }}
+								loading="lazy"
+							/>
 						</div>
 						<div
 							className="dark:text-gray-600 dark:group-hover:text-showtime transition"

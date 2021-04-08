@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
 					<Header />
 					<ScrollToTop />
 					<main>{children}</main>
-					<button onClick={changeTheme} class="fixed bottom-3 right-3 bg-white dark:bg-black border-2 border-gray-800 dark:border-gray-400 p-1 rounded-full">
+					<button onClick={changeTheme} className="fixed bottom-3 right-3 bg-white dark:bg-black border-2 border-gray-800 dark:border-gray-400 p-1 rounded-full">
 						<ThemeIcon className="w-6 h-6 text-gray-800 dark:text-gray-400" />
 					</button>
 					<Footer />
