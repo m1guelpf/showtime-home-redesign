@@ -4,7 +4,7 @@ import { InformationCircleIcon } from '@heroicons/react/solid'
 
 const Spotlight = () => {
 	return (
-		<div className="pt-6 px-10">
+		<div className="pt-6 px-4 sm:px-10">
 			<Hero />
 			<div className="mx-auto pt-6 pb-12">
 				<div className="infinite-scroll-component__outerdiv">
@@ -27,7 +27,7 @@ const Hero = () => (
 		<div className="flex flex-row">
 			<h3 className="self-end text-2xl md:text-4xl flex items-center space-x-2">
 				<p className="dark:text-gray-400">User Spotlights</p>
-				<InformationCircleIcon className="w-5 h-5 cursor-pointer text-gray-300 dark:text-gray-500 dark:hover:text-gray-600 mt-1 transition" />
+				<InformationCircleIcon className="hidden sm:block w-5 h-5 cursor-pointer text-gray-300 dark:text-gray-500 dark:hover:text-gray-600 mt-1 transition" />
 			</h3>
 			<div className="flex-grow " />
 			<div className="self-end">

@@ -3,7 +3,7 @@ import NFT from '../NFT'
 import { ShowMoreButton } from './Spotlight'
 
 const Trending = () => (
-	<div className="pt-6 px-10">
+	<div className="pt-6 px-4 sm:px-10">
 		<Hero />
 		<div className="infinite-scroll-component__outerdiv pb-12">
 			<div className="infinite-scroll-component">

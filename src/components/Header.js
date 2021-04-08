@@ -1,7 +1,7 @@
 import { BellIcon, SearchIcon } from '@heroicons/react/outline'
 
 const Header = () => (
-	<header className="p-4 shadow-header dark:shadow-header-dark bg-crystal fixed bg-white dark:bg-black bg-opacity-80 dark:bg-opacity-80 w-full z-10 px-16">
+	<header className="p-4 shadow-header dark:shadow-header-dark bg-crystal fixed bg-white dark:bg-black bg-opacity-80 dark:bg-opacity-80 w-full z-10 sm:px-16">
 		<div className="flex flex-row items-center justify-between space-x-6">
 			<div>
 				<a className="flex flex-row showtime-header-link items-center text-left mr-auto" href="/">
@@ -10,7 +10,7 @@ const Header = () => (
 					</div>
 				</a>
 			</div>
-			<div class="flex-grow flex-1">
+			<div class="hidden sm:block flex-grow flex-1">
 				<div class="relative w-full">
 					<SearchIcon className="w-5 h-5 absolute top-2.5 left-3 text-gray-500 dark:text-gray-700" />
 					<input type="search" placeholder="Search by name or wallet address" class="rounded-full border-gray-400 dark:border-gray-800 dark:text-gray-400 w-full pl-10 focus:outline-none focus:border-gray-800 dark:focus:border-gray-600 focus:ring-gray-800 dark:focus:ring-gray-600 transition bg-transparent" />

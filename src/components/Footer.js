@@ -2,7 +2,7 @@ import { MailIcon } from '@heroicons/react/solid'
 
 const Footer = () => (
 	<footer className="text-center mt-12 bg-black dark:bg-gray-900 px-10">
-		<div className="text-sm my-8 py-4 text-center text-gray-400 flex items-center justify-between ">
+		<div className="text-sm my-8 py-4 text-center text-gray-400 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
 			<div>&copy; {new Date().getFullYear()} Showtime Technologies, Inc.</div>
 			<div className="flex flex-row space-x-3">
 				<a href="mailto:help@tryshowtime.com" target="_blank" className="hover:text-gray-300 transition -mt-0.5">
