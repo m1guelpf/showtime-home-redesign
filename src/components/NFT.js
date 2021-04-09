@@ -1,4 +1,5 @@
 import ChatIcon from './Icons/ChatIcon'
+import Link from 'next/link'
 import { ExternalLinkIcon, HeartIcon, LinkIcon, ShareIcon } from '@heroicons/react/outline'
 
 const NFT = ({
@@ -9,6 +10,7 @@ const NFT = ({
 	comment_count,
 	creator_name,
 	creator_username,
+	owner_username,
 	creator_img_url,
 	token_img_url,
 	owner_img_url,
@@ -20,33 +22,45 @@ const NFT = ({
 	<div className="mx-auto rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-900 w-full flex flex-col transform hover:-translate-y-1 transition duration-300 ease-in-out">
 		<div className="p-4 flex items-center justify-between w-full space-x-1.5">
 			<div className="flex-shrink overflow-hidden">
-				<a className="flex flex-row items-center" href={`https://tryshowtime.com/${creator_username}`}>
+				<div className="flex flex-row items-center">
 					<div className="flex -space-x-1 overflow-hidden flex-shrink-0">
-						<img
-							className="inline-block h-6 w-6 rounded-full ring-2 ring-white dark:ring-gray-900"
-							src={creator_img_url || `https://avatar.tobi.sh/showtime-${creator_name}`}
-							alt={creator_name}
-							loading="lazy"
-						/>
+						<Link href={`/${creator_username}`}>
+							<a>
+								<img
+									className="inline-block h-6 w-6 rounded-full ring-2 ring-white dark:ring-gray-900"
+									src={creator_img_url || `https://avatar.tobi.sh/showtime-`}
+									alt={creator_name}
+									loading="lazy"
+								/>
+							</a>
+						</Link>
 						{owner_name && creator_name !== owner_name && (
-							<img
-								className="inline-block h-6 w-6 rounded-full ring-2 ring-white dark:ring-gray-900"
-								src={owner_img_url || `https://avatar.tobi.sh/showtime-${creator_name}`}
-								alt={owner_name}
-								loading="lazy"
-							/>
+							<Link href={`/${owner_username}`}>
+								<a>
+									<img
+										className="inline-block h-6 w-6 rounded-full ring-2 ring-white dark:ring-gray-900"
+										src={owner_img_url || `https://avatar.tobi.sh/showtime-${creator_name}`}
+										alt={owner_name}
+										loading="lazy"
+									/>
+								</a>
+							</Link>
 						)}
 					</div>
 					<div className="ml-2 flex items-center space-x-1.5 flex-shrink truncate">
-						<div className="showtime-card-profile-link whitespace-nowrap truncate dark:text-gray-400">{creator_name}</div>
+						<Link href={`/${creator_username}`}>
+							<a className="showtime-card-profile-link whitespace-nowrap truncate dark:text-gray-400">{creator_name}</a>
+						</Link>
 						{owner_name && creator_name !== owner_name && (
 							<>
 								<LinkIcon className="w-4 h-4 text-gray-400 dark:text-gray-600" />
-								<div className="showtime-card-profile-link whitespace-nowrap truncate dark:text-gray-400">{owner_name}</div>
+								<Link href={`/${owner_username}`}>
+									<a className="showtime-card-profile-link whitespace-nowrap truncate dark:text-gray-400">{owner_name}</a>
+								</Link>
 							</>
 						)}
 					</div>
-				</a>
+				</div>
 			</div>
 			<a
 				href={`https://opensea.io/assets/${contract_address}/${token_id}?ref=0x0c7f6405bf7299a9ebdccfd6841feac6c91e5541`}
